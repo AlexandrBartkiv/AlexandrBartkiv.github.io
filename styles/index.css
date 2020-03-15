@@ -251,7 +251,7 @@ ul > li:hover::after {
 .projects {
   height: 100vh;
   position: relative;
-  background-color: #ffa600;
+  background-color: #ff5757;
   top: 11rem;
 }
 
@@ -265,14 +265,14 @@ ul > li:hover::after {
   font-size: 4rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 1;
-  color: #8b72a5;
+  color: #ffffff;
 }
 
 .projects .projects_wraper {
   position: relative;
   top: 10rem;
   left: 10rem;
-  border: purple solid 2px;
+  border: white solid 2px;
   height: 25rem;
   width: 75%;
   padding: 2rem;

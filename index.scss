@@ -184,7 +184,7 @@ ul{
 .projects{
     height: 100vh;
     position: relative;
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(255, 87, 87);
     top:11rem;
     &>h1{
         position: relative;
@@ -194,13 +194,13 @@ ul{
         font-size: 4rem;
         font-family: 'Montserrat', sans-serif;
         font-weight: min($numbers: 1);
-        color: #8b72a5;
+        color: #ffffff;
     }
     .projects_wraper{
         position: relative;
         top: 10rem;
         left: 10rem;    
-        border: rgb(128, 0, 128) solid 2px;
+        border: rgb(255, 255, 255) solid 2px;
         height: 25rem;
         width: 75%;
         padding: 2rem;
