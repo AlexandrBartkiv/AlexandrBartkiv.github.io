@@ -16,7 +16,7 @@ html, body {
   min-width: 320px;
 }
 
-.header {
+.logo {
   height: 100vh;
   width: auto;
   background: url(/img/fabian-grohs-dC6Pb2JdAqs-unsplash.jpg) center no-repeat;
@@ -24,7 +24,7 @@ html, body {
   position: relative;
 }
 
-.header::before {
+.logo::before {
   content: "";
   position: absolute;
   left: 0px;
@@ -37,13 +37,17 @@ html, body {
   z-index: 1;
 }
 
-.header_wrap {
-  position: relative;
+.name {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "h1_1 h1_2" "h2 h2";
+  -ms-grid-rows: 2fr;
+      grid-template-rows: 2fr;
+  -ms-grid-columns: 16rem 16rem;
+      grid-template-columns: 16rem 16rem;
+  grid-gap: 1rem;
   z-index: 2;
   color: white;
-}
-
-.header_wrap .name {
   position: relative;
   top: 14rem;
   left: 6rem;
@@ -51,14 +55,29 @@ html, body {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-
-.header_wrap .name > p {
   font-family: 'Montserrat', sans-serif;
 }
 
-.header_wrap .name span {
+.name #h1_1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h1_1;
+  font-size: 2em;
+}
+
+.name #h1_2 {
+  font-size: 2em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: h1_2;
   color: #ff2323;
+}
+
+.name #front {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: h2;
 }
 
 nav {
@@ -69,6 +88,7 @@ nav {
   font-size: 1.7rem;
   position: relative;
   top: 4rem;
+  z-index: 1;
 }
 
 ul {
@@ -163,67 +183,144 @@ ul > li:hover::after {
 }
 
 .about {
-  height: 50%;
+  height: 100vh;
   background-color: #8b72a5;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+      grid-template-areas: "h1 about" "photo about" ". about";
+  -ms-grid-columns: 1fr (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: 1fr repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-rows: [h1] 150px [photo] 350px;
+      grid-template-rows: [h1] 150px [photo] 350px;
 }
 
-.about > h1 {
-  position: relative;
+.about .aboutme {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .aboutme h1 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: 4rem;
   font-size: 5rem;
-  margin-left: 7rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 1;
   color: white;
 }
 
-.about > h1 > span {
+.about .aboutme h1 > span {
   color: #ff2323;
 }
 
-.about .info_wraper {
-  height: 100vh;
+.about .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: photo;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -6rem;
 }
 
-.about .info_wraper > .img {
-  position: relative;
-  top: 8rem;
-  margin-left: 8rem;
+.about .photo .img {
+  margin-left: 6rem;
   height: 20rem;
   width: 20rem;
   border: white solid;
   border-radius: 165px;
   background: url(/img/indaewfex.png), center, no-repeat;
   background-size: cover;
+  z-index: 1;
 }
 
-.about .info_wraper > .info {
-  height: 15rem;
+.about .aboutskills {
+  margin-top: 10rem;
+  margin-right: 2rem;
+  height: 33rem;
+  width: 57rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #963eee;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: about;
+}
+
+.about .aboutskills .info {
+  width: auto;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -6rem;
   width: 45rem;
-  position: relative;
-  margin-left: 36rem;
-  top: -6rem;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
 }
 
-.about .info_wraper > .info span {
+.about .aboutskills .info > span {
   font-size: 1.9rem;
 }
 
-.about .info_wraper #skills {
-  position: relative;
-  bottom: 6rem;
+.about .aboutskills > .skillswrapper {
+  margin-top: 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: about;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.about .aboutskills > .skillswrapper > .skills {
+  margin-bottom: 3rem;
   border-radius: 20px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background: wheat;
-  margin-left: 36rem;
+  max-height: 300px;
+  background: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -236,11 +333,11 @@ ul > li:hover::after {
   padding: 20px 0px 20px 0px;
 }
 
-.about .info_wraper #skills div {
+.about .aboutskills > .skillswrapper > .skills div {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   border-radius: 10px;
-  background: purple;
+  background: #963e8a;
   color: #fff;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -250,9 +347,7 @@ ul > li:hover::after {
 
 .projects {
   height: 100vh;
-  position: relative;
   background-color: #ff5757;
-  top: 11rem;
 }
 
 .projects > h1 {
@@ -273,21 +368,24 @@ ul > li:hover::after {
   top: 10rem;
   left: 10rem;
   border: white solid 2px;
+  border-radius: 5px;
   height: 25rem;
   width: 75%;
   padding: 2rem;
 }
 
 .contacts {
-  position: relative;
-  top: 11rem;
   height: 100vh;
+  border: 2px solid white;
   background: #8b72a5;
 }
 
 .contacts .contacts1 {
   height: 50%;
   background-color: tomato;
+  border-bottom: 2px solid white;
+  position: relative;
+  overflow: hidden;
 }
 
 .contacts .contacts1 > h1 {
@@ -301,21 +399,29 @@ ul > li:hover::after {
 }
 
 .contacts .contacts1 > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   width: 45%;
   margin: auto;
   top: 4rem;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
 }
 
-.contacts .contacts1 > .button {
+.contacts .contacts1 > .button1 {
   text-decoration: none;
   outline: none;
   display: inline-block;
   padding: 10px 30px;
   margin-left: 45%;
   position: relative;
-  top: 9rem;
+  top: 13rem;
   height: 4rem;
   width: 7rem;
   overflow: hidden;
@@ -328,13 +434,28 @@ ul > li:hover::after {
   transition: .2s ease-in-out;
 }
 
-.contacts .contacts1 .button:hover {
+.contacts .contacts1 .button1:hover {
   border: 2px solid #ffb733;
   background: #ffb733;
   color: #fff;
 }
 
+.contacts .contacts1 .button1:active {
+  border-top: 2px solid grey;
+  border-left: 2px solid grey;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.contacts .contacts1 > .cat {
+  width: 10rem;
+  position: absolute;
+  top: 8rem;
+  left: -10rem;
+}
+
 .contacts > .contacts2 {
+  border-right: 2px solid white;
   height: 50%;
   background-color: rgba(255, 165, 0, 0.8);
   width: 30rem;
@@ -368,11 +489,19 @@ ul > li:hover::after {
 }
 
 .contacts form {
+  margin-top: -2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
-  left: 30rem;
+  left: 35rem;
 }
 
 .contacts form .name {
+  position: static;
+  margin-top: 1rem;
   height: 2rem;
   width: 31rem;
   background: rgba(255, 255, 255, 0.25);
@@ -467,7 +596,7 @@ ul > li:hover::after {
   color: white;
 }
 
-.contacts form > button {
+.contacts form button {
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -479,6 +608,7 @@ ul > li:hover::after {
   height: 4rem;
   width: 10rem;
   overflow: hidden;
+  border: 2px solid #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -486,10 +616,20 @@ ul > li:hover::after {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   background-color: #ffffff;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25);
+          box-shadow: rgba(255, 255, 255, 0.25);
 }
 
 .contacts form button:hover {
   background: #ff6347;
   color: #fff;
+  border: 2px solid #ff6347;
+}
+
+.contacts form button:active {
+  border-top: 2px solid grey;
+  border-left: 2px solid grey;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 }
 /*# sourceMappingURL=index.css.map */

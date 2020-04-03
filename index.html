@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-                <header class="header_wrap">
+        <div class="logo">
+              
                     <nav>
                         <ul>
                             <li><a id="about">About</a></li>
@@ -19,25 +19,29 @@
                             <li><a id="contacts">Contacts</a></li>
                         </ul>
                     </nav>
-                    <div class="name">
-                        <h1>Alexandr <span class="h1_sec">Bartkiv</span></h1>
-                        <p>Front end developer</p>
-                        
-                    </div>
-                </header>   
+                <div class="name">
+                   <p id="h1_1">Alexandr</p> <span id="h1_2">Bartkiv</span>
+                    <p id="front">Front end developer</p>
+                    
+                </div>  
         </div>
         <main>
             <div class="buttonUp">
             <a href=""><img src="./img/uparrow.png" alt="up" id="up"></a>
             </div>
-           <div class="about">
-            <h1>ABOUT <span>ME</span></h1>
-                <div class="info_wraper">
-                    <div class="img">
-                    </div>
+        <div class="about">
+            <div class="aboutme"><h1>ABOUT <span>ME</span></h1></div>
+                   <div class="photo">
+                    <div class="img"></div>
+                   </div> 
+                <div class="aboutskills">
+                   <div class="inform">
                     <div class="info"><span>I am Alexandr Bartkiv</span> and I am a Web Developer located in Kyiv, Ukraine. 
-                        I am looking to take a job and increase my skills as a Web Developer.</div>
-                        <div id="skills">
+                        I am looking to take a job and increase my skills as a Web Developer.
+                    </div>
+                   </div>
+                    <div class="skillswrapper">
+                        <div class="skills">
                             <div>JS(ES6)</div>
                             <div>HTML5</div>
                             <div>CSS3(Scss)</div>
@@ -50,17 +54,20 @@
                             <div>Ajax</div>
                             <div>GIT</div>
                         </div>
-            </div>
-            <div class="projects">
+                    </div>   
+                </div> 
+        </div>
+        <div class="projects">
                 <h1>My projects</h1>
                 <div class="projects_wraper">
                 </div>
-            </div>
+        </div>
             <div class="contacts">
                 <div class="contacts1">
                     <h1>LIKE WHAT YOU SEE?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque odio nihil possimus recusandae vitae laborum fugit velit id provident.</p>
-                    <input type="button" value="GO" class="button">
+                    <p>You can tap this button to see a cute kitty!!</p>
+                    <input type="button" value="RUN" class="button1">
+                    <!-- <img src=" " class="cat"> -->
                 </div>
                 <div class="contacts2">
                     <h2>CONTACTS</h2>
@@ -68,9 +75,9 @@
                     <a href="" class="mail"><img src="img\iconmonstr-gmail-4-32.png" alt="" ></a>
                     <a href="http://linkedin.com/in/alexandr-bartkiv-1875581a0" class="linkedin"><img src="img\iconmonstr-linkedin-3-32.png" alt="" ></a>
                     <form id="form">
-                        <input type="text" name="name" placeholder="  Name" required class="name" /><br />
-                        <input type="text" name="phone" placeholder="  Phone" required class="phone"/><br />
-                        <input type="text" name="email" placeholder="  E-mail" required class="mail"/><br />
+                        <input type="text" name="name" placeholder="  Name" required class="name"/>
+                        <input type="text" name="phone" placeholder="  Phone" required class="phone"/>
+                        <input type="text" name="email" placeholder="  E-mail" required class="mail"/>
                         <button>Send</button>
                     </form>
                 </div>

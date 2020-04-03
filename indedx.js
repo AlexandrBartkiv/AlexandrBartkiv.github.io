@@ -16,6 +16,24 @@ $(document).ready(function() {
 		}, 1000,"swing");
 	});
 	
+	$('.button1').click(function(){	
+		var img = new Image;
+		img.src = './img/WanCloseCranefly.webp';
+		$('.button1').before(img);
+		$('.contacts1>img').addClass('cat')
+		console.log(img);
+		timeout = setTimeout( function run() {
+		$('.cat').animate({
+			left:'+=4rem'
+		},300)
+		console.log('1')
+		runrec = setTimeout(run, 100);
+		console.log('2')
+		console.log($('.cat').css('left'))
+	}, 500);
+	
+	
+	});
 	window.addEventListener(`scroll`, () => {
 		scroll = window.scrollY
 		console.log(scroll)

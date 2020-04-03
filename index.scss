@@ -13,14 +13,14 @@ html, body {
     max-width: 100%;
     min-width: 320px;
 }
-.header{
+.logo{
     height: 100vh;
     width: auto;
     background: url(/img/fabian-grohs-dC6Pb2JdAqs-unsplash.jpg) center no-repeat;
     background-size: cover;
     position: relative;
 }
-.header::before {
+.logo::before {
     content:"";
     position: absolute;
     left: 0px;
@@ -31,24 +31,38 @@ html, body {
     background: linear-gradient(to left, rgba(153, 0, 255, 0.40),rgba(0, 51, 153, 0.60) );
     z-index: 1;
 }
-.header_wrap{
-    position: relative;
-    z-index: 2;
-    color: white;
+
+    
     .name{
+        display: grid;
+        grid-template-areas: 
+        "h1_1 h1_2"
+        "h2 h2" ;
+        grid-template-rows: 2fr;
+        grid-template-columns: 16rem 16rem;
+        grid-gap: 1rem;
+        z-index: 2;
+        color: white;
         position: relative;
         top: 14rem;
         left: 6rem;
         font-size: 2rem;
         width: max-content;
-        &>p{
-            font-family: 'Montserrat', sans-serif;;
+        font-family: 'Montserrat', sans-serif;    
+        #h1_1{
+            grid-area: h1_1;
+            font-size: 2em;
         }
-        & span{
+        #h1_2{
+            font-size: 2em;
+            grid-area: h1_2;
             color: rgb(255, 35, 35);
         }
+        #front{
+            grid-area: h2;
+        }
     }
-}
+
 nav{
     width: 50%;
     height: 3rem;
@@ -57,6 +71,7 @@ nav{
     font-size: 1.7rem;;
     position: relative;
     top: 4rem;
+    z-index: 1;
 }
 ul{
    display: flex;
@@ -112,80 +127,115 @@ ul{
 
 }
 .about{
-    height: 50%;
+    height: 100vh;
     background-color: rgb(139, 114, 165);
-    & > h1{
-        position: relative;
-        width: max-content;
-        top: 4rem;
-        font-size: 5rem;
-        margin-left: 7rem;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: min($numbers: 1);
-        color: white;
-        & > span{
-            color: rgb(255, 35, 35);
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: 
+    "h1 about"
+    "photo about"
+    ". about";
+    grid-template-columns: 1fr repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows:[h1] 150px [photo]350px;
+    & .aboutme{
+        grid-area: h1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & h1{
+            width: max-content;
+            font-size: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: min($numbers: 1);
+            color: white;
+            & > span{
+                color: rgb(255, 35, 35);
+            }
         }
     }
-    .info_wraper{
-        height: 100vh;
-        & > .img{
-            position: relative;
-            top: 8rem;
-            margin-left: 8rem;
+    & .photo{
+        display: flex;
+        grid-area: photo;
+        justify-content: center;
+        align-items: center;
+        margin-left: -6rem;
+        & .img{
+            margin-left: 6rem;
             height: 20rem;
             width: 20rem;
             border: rgb(255, 255, 255) solid;
             border-radius: 165px;
             background: url(/img/indaewfex.png), center, no-repeat;
             background-size: cover;
+            z-index: 1;
         }
-        & > .info{
-            height: 15rem;
-            width: 45rem;
-            position: relative;
-            margin-left: 36rem;
-            top: -6rem;
-            color: rgb(255, 255, 255);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            & span{
-                font-size: 1.9rem;
-            }
-            
-        }
-        #skills {
-            position: relative;
-            bottom: 6rem;
-            border-radius: 20px;
-            width: max-content;
-            background: wheat;
-            margin-left: 36rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
-            justify-items: center;
-            align-items: center;
-            padding: 20px 0px 20px 0px ;
-          
-            & div{
+    }
+    .aboutskills{
+        margin-top: 10rem;
+        margin-right:2rem;
+        height: 33rem;
+        width: 57rem;
+        justify-content: center;
+        background-color: rgb(150, 62, 238);
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        grid-area: about;
+    
+           
+            & .info{
+                width: auto;
+                margin-left: 1rem;
+                margin-top: 2rem;
+                justify-content: start;
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -6rem;
+                width: 45rem;
+                color: rgb(255, 255, 255);
                 font-family: 'Montserrat', sans-serif;
                 font-size: 30px;
-                border-radius: 10px;
-                
-                background: rgb(128, 0, 128);
-                color: #fff;
-                width: max-content;
-                padding: 10px;
+                &>span{
+                    font-size: 1.9rem;  
+                }
             }
-        }
+        
+        &>.skillswrapper{
+            margin-top: 1rem;
+            grid-area: about;
+            display: flex;
+            justify-content: end;
+            &>.skills {
+                margin-bottom: 3rem;
+                border-radius: 20px;
+                width: max-content;
+                max-height: 300px;
+                background: rgb(255, 255, 255);
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px;
+                justify-items: center;
+                align-items: center;
+                padding: 20px 0px 20px 0px ;
+                & div{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 30px;
+                    border-radius: 10px;
+                    
+                    background: rgb(150, 62, 138);
+                    color: #fff;
+                    width: max-content;
+                    padding: 10px;
+                }
+            }
+        }    
     }
 }
 .projects{
     height: 100vh;
-    position: relative;
     background-color: rgb(255, 87, 87);
-    top:11rem;
     &>h1{
         position: relative;
         top: 4rem;
@@ -201,19 +251,22 @@ ul{
         top: 10rem;
         left: 10rem;    
         border: rgb(255, 255, 255) solid 2px;
+        border-radius: 5px;
         height: 25rem;
         width: 75%;
         padding: 2rem;
     }
 }
 .contacts{
-    position: relative;
-    top: 11rem;
     height: 100vh;
+    border: 2px solid white;
     background: rgb(139, 114, 165); 
     .contacts1{
         height: 50%;
         background-color: rgb(255, 99, 71);
+        border-bottom:2px solid rgb(255, 255, 255);
+        position: relative;
+        overflow: hidden;
         &>h1{
             width: max-content;
             position: relative;
@@ -222,13 +275,17 @@ ul{
             color: rgb(255, 255, 255);
         }
         &>p{
+            display: flex;
+            justify-content: center;
             position: relative;
             width: 45%;
             margin: auto;
             top: 4rem;
             color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
         }
-        &>.button{
+        &>.button1{
             text-decoration: none;
             outline: none;
             display: inline-block;
@@ -236,7 +293,7 @@ ul{
             margin-left: 45%;
             position: relative;
             // left: 35rem;
-            top: 9rem;
+            top: 13rem;
             height: 4rem;
             width: 7rem;
             overflow: hidden;
@@ -247,14 +304,27 @@ ul{
             color: #ffa200;
             transition: .2s ease-in-out;
           }
-          .button:hover {
+          .button1:hover {
             border: 2px solid #ffb733;
             background: #ffb733;
             color: #fff;
           }
+          .button1:active {
+            border-top:2px solid grey;
+            border-left:2px solid grey ;
+            border-right:2px solid rgb(255, 255, 255);
+            border-bottom:2px solid rgb(255, 255, 255);
+          }
+          &>.cat{
+            width: 10rem;
+            position: absolute;
+            top: 8rem;
+            left:-10rem;
+          }
          
     }
     &>.contacts2{
+        border-right: 2px solid white;
         height: 50%;
         background-color: rgba(255, 165, 0, 0.8);
         width: 30rem;
@@ -284,9 +354,14 @@ ul{
         }
     }
     & form{
+        margin-top: -2rem;
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
-        left: 30rem;
+        left: 35rem;
         & .name{
+            position:static ;
+            margin-top: 1rem;
             height: 2rem;
             width: 31rem;
             background:rgba(255, 255, 255, 0.25);
@@ -321,7 +396,7 @@ ul{
                 font-family: 'Montserrat', sans-serif;
                 color: rgb(255, 255, 255);
             }
-        &>button{
+        & button{
             text-decoration: none;
             outline: none;
             display: inline-block;
@@ -333,19 +408,27 @@ ul{
             height: 4rem;
             width: 10rem;
             overflow: hidden;
-            // border: 2px solid #ff6347;
+            border: 2px solid #ffffff;
             font-family: 'Montserrat', sans-serif; 
             font-weight: bold;
             font-size: 1rem;
             color: #ff6347;
             transition: .2s ease-in-out;
             background-color: #ffffff;
-            // box-shadow: rgba(255, 255, 255, 0.25);
+            box-shadow: rgba(255, 255, 255, 0.25);
           }
      
           button:hover {
             background: #ff6347;
             color: #fff;
+            border:2px solid #ff6347 ;
+          }
+          button:active{
+              border-top:2px solid grey;
+              border-left:2px solid grey ;
+              border-right:2px solid rgb(255, 255, 255);
+              border-bottom:2px solid rgb(255, 255, 255);
+              
           }
      
     }
