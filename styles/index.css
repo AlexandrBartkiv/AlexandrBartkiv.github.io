@@ -476,10 +476,15 @@ ul > li:hover::after {
   font-size: 1.5rem;
 }
 
-.contacts > .contacts2 > .mail {
+.contacts > .contacts2 > .telega {
   position: relative;
   margin-left: 4rem;
   top: 9rem;
+}
+
+.contacts > .contacts2 > .telega > img {
+  height: 32px;
+  width: 32px;
 }
 
 .contacts > .contacts2 > .linkedin {
@@ -499,99 +504,85 @@ ul > li:hover::after {
   left: 35rem;
 }
 
-.contacts form .name {
-  position: static;
-  margin-top: 1rem;
-  height: 2rem;
-  width: 31rem;
-  background: rgba(255, 255, 255, 0.25);
-  border: none;
-}
-
-.contacts form .name::-webkit-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .name:-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .name::-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .name::placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .phone {
-  margin-top: 1rem;
-  height: 2rem;
-  width: 31rem;
-  background: rgba(255, 255, 255, 0.25);
-  border: none;
-}
-
-.contacts form .phone::-webkit-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .phone:-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .phone::-ms-input-placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.contacts form .phone::placeholder {
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
 .contacts form > .mail {
   margin-top: 1rem;
+  padding: 1rem;
   height: 2rem;
   width: 31rem;
   background: rgba(255, 255, 255, 0.25);
   border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: white;
 }
 
 .contacts form .mail::-webkit-input-placeholder {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
 .contacts form .mail:-ms-input-placeholder {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
 .contacts form .mail::-ms-input-placeholder {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
 .contacts form .mail::placeholder {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.contacts form > .message {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  height: 7rem;
+  width: 31rem;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.contacts form .message::-webkit-input-placeholder {
+  text-align: start;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.contacts form .message:-ms-input-placeholder {
+  text-align: start;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.contacts form .message::-ms-input-placeholder {
+  text-align: start;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.contacts form .message::placeholder {
+  text-align: start;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }

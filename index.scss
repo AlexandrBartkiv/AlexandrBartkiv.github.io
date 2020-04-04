@@ -342,10 +342,15 @@ ul{
             font-size: 1.5rem;
 
         }
-        &>.mail{
-           position: relative;
-           margin-left: 4rem;
-           top: 9rem;
+        &>.telega{
+            
+            position: relative;
+            margin-left: 4rem;
+            top: 9rem;
+            &>img{
+                height: 32px;
+                width: 32px;
+            }
         }
         &>.linkedin{
            position: relative;
@@ -359,40 +364,40 @@ ul{
         flex-wrap: wrap;
         position: relative;
         left: 35rem;
-        & .name{
-            position:static ;
-            margin-top: 1rem;
-            height: 2rem;
-            width: 31rem;
-            background:rgba(255, 255, 255, 0.25);
-            border: none;
-        }
-        .name::placeholder{
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            color: rgb(255, 255, 255);
-        }
-        & .phone{
-            margin-top: 1rem;
-            height: 2rem;
-            width: 31rem;
-            background:rgba(255, 255, 255, 0.25);
-            border: none;
-        }
-        .phone::placeholder{
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            color: rgb(255, 255, 255);;
-        }
+       
         &>.mail{
                 margin-top: 1rem;
+                padding: 1rem;
                 height: 2rem;
                 width: 31rem;
                 background:rgba(255, 255, 255, 0.25);
                 border: none;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1rem;
+                color: rgb(255, 255, 255);
             }
             .mail::placeholder{
-                font-size: 1rem;
+                font-size: 1.2rem;
+                font-family: 'Montserrat', sans-serif;
+                color: rgb(255, 255, 255);
+            }
+            &>.message{
+                box-sizing: border-box;
+                resize: none;
+                padding: 1rem;
+                margin-top: 1rem;
+                height: 7rem;
+                width: 31rem;
+                background:rgba(255, 255, 255, 0.25);
+                border: none;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.1rem;
+                color: rgb(255, 255, 255);
+            }
+            .message::placeholder{
+                text-align: start;
+                margin-bottom: 2rem;
+                font-size: 1.3rem;
                 font-family: 'Montserrat', sans-serif;
                 color: rgb(255, 255, 255);
             }

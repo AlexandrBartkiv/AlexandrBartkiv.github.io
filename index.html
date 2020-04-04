@@ -67,18 +67,20 @@
                     <h1>LIKE WHAT YOU SEE?</h1>
                     <p>You can tap this button to see a cute kitty!!</p>
                     <input type="button" value="RUN" class="button1">
-                    <!-- <img src=" " class="cat"> -->
                 </div>
                 <div class="contacts2">
                     <h2>CONTACTS</h2>
                     <p>+380-96-080-11-11</p>
-                    <a href="" class="mail"><img src="img\iconmonstr-gmail-4-32.png" alt="" ></a>
-                    <a href="http://linkedin.com/in/alexandr-bartkiv-1875581a0" class="linkedin"><img src="img\iconmonstr-linkedin-3-32.png" alt="" ></a>
-                    <form id="form">
-                        <input type="text" name="name" placeholder="  Name" required class="name"/>
-                        <input type="text" name="phone" placeholder="  Phone" required class="phone"/>
-                        <input type="text" name="email" placeholder="  E-mail" required class="mail"/>
-                        <button>Send</button>
+                    <a href="https://web.telegram.org/@Allaudi" class="telega"><img src="./img/telegram-64x64.png" alt="telegram"></a>
+                    <a href="http://linkedin.com/in/alexandr-bartkiv-1875581a0" class="linkedin"><img src="img\iconmonstr-linkedin-3-32.png" alt="linkedin" ></a>
+                    <form id="my-form"
+                        action="https://formspree.io/xdolkbzk"
+                        method="POST"
+                        >
+                        <input type="email" name="email" class="mail" placeholder=" Email:" />
+                        <input type="text" name="message" class="message" placeholder=" Enter your message" />
+                        <button id="my-form-button">Submit</button>
+                        <p id="my-form-status"></p>
                     </form>
                 </div>
             </div>
