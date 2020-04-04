@@ -255,6 +255,14 @@ ul{
         height: 25rem;
         width: 75%;
         padding: 2rem;
+        &>#toDo{
+            height: max-content;
+            width: max-content;
+            & .ToDo{
+                width: 15rem;
+                height: 15rem;
+            }
+        }
     }
 }
 .contacts{
