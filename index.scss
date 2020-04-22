@@ -12,6 +12,9 @@ html, body {
 .container{
     max-width: 100%;
     min-width: 320px;
+    @media (max-width: 480px){
+        overflow: hidden;
+    }
 }
 .logo{
     height: 100vh;

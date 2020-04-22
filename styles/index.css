@@ -16,6 +16,12 @@ html, body {
   min-width: 320px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    overflow: hidden;
+  }
+}
+
 .logo {
   height: 100vh;
   width: auto;
