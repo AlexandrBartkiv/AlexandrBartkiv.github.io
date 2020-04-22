@@ -11,8 +11,11 @@
 <body>
     <div class="container">
         <div class="logo">
-              
-                    <nav>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+                    <nav class="nav">
                         <ul>
                             <li><a id="about">About</a></li>
                             <li><a id="projects">Projects</a></li>
@@ -35,11 +38,11 @@
                     <div class="img"></div>
                    </div> 
                 <div class="aboutskills">
-                   <div class="inform">
-                    <div class="info"><span>I am Alexandr Bartkiv</span> and I am a Web Developer located in Kyiv, Ukraine. 
+                 
+                    <div class="info">I am Alexandr Bartkiv and I am a Web Developer located in Kyiv, Ukraine. 
                         I am looking to take a job and increase my skills as a Web Developer.
                     </div>
-                   </div>
+                 
                     <div class="skillswrapper">
                         <div class="skills">
                             <div>JS(ES6)</div>
@@ -49,8 +52,6 @@
                             <div>jQuery</div>
                             <div>Vue.js</div>
                             <div>Vue.CLI</div>
-                            <div>Angular 8(basic)</div>
-                            <div>Angular CLI</div>
                             <div>Ajax</div>
                             <div>GIT</div>
                         </div>
@@ -76,6 +77,8 @@
                     <p>+380-96-080-11-11</p>
                     <a href="https://t.me/@Allaudi" class="telega"><img src="./img/telegram-64x64.png" alt="telegram"></a>
                     <a href="http://linkedin.com/in/alexandr-bartkiv-1875581a0" class="linkedin"><img src="img\iconmonstr-linkedin-3-32.png" alt="linkedin" ></a>
+                </div>
+                <div class="form">
                     <form id="my-form"
                         action="https://formspree.io/xdolkbzk"
                         method="POST"
@@ -88,9 +91,6 @@
                 </div>
             </div>
         </main>
-        <footer>
-
-        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2542/jquery.scrollie.min_1.js"></script>  

@@ -52,7 +52,7 @@ $(document).ready(function() {
 	let timer;
 	document.getElementById(`up`).addEventListener(`click`, () => {
 		$([document.documentElement, document.body]).animate({
-			scrollTop: $(`header`).offset().top
+			scrollTop: $(`.logo`).offset().top
 		}, 1000,"swing");
 	});
 
