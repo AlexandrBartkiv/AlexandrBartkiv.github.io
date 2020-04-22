@@ -31,30 +31,29 @@ $(document).ready(function() {
 		console.log('2')
 		console.log($('.cat').css('left'))
 	}, 500);
-	
-	
-	});
-	window.addEventListener(`scroll`, () => {
-		scroll = window.scrollY
-		console.log(scroll)
-		if (scroll > 150){
-			document.getElementById(`up`).style.animation = `move 1s `;
-			document.getElementById(`up`).style.right = `2rem`;
-		}
-		else if (scroll < 150){
-			document.getElementById(`up`).style.animation = `moveback 1s `;
-			document.getElementById(`up`).style.right = `-3rem`;
-		}
-		
+});
+
+$(`#a`).click(function(event){
+	event.preventDefault()
+		$([document.documentElement, document.body]).animate({
+			scrollTop: $(".logo").offset().top
+		}, 1000,"swing");
+		console.log('hui')
 	});
 
-	let scrolled;
-	let timer;
-	document.getElementById(`up`).addEventListener(`click`, () => {
-		$([document.documentElement, document.body]).animate({
-			scrollTop: $(`.logo`).offset().top
-		}, 1000,"swing");
-	});
+	$(window).scroll(function(event){
+		console.log(window.scrollY)
+	if (window.scrollY>150){
+		$('.up').addClass('op')
+		
+	}
+	else if(window.scrollY<150){
+		$('.up').removeClass('op')
+	}
+})
+
+
+	
 
 	// FORM
 	window.addEventListener("DOMContentLoaded", function() {

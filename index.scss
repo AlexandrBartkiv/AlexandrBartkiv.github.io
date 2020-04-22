@@ -185,32 +185,24 @@ ul{
     }
     & > li:hover::after {
     width: 100%;
-    
-
     }                
 }
-.buttonUp{  
-    position: static;
-    top: 12rem;
-    z-index: 2;
-    & img{
-        position: sticky;
-        opacity: 0.9;
-        top: 12rem;
-        position: absolute;
-        height: 3rem;
-        right: -3rem;
+    .up{
+        background-color: rgba(149, 17, 167, 0.562);
+        position: fixed;
+        opacity: 0;
+        bottom: 5rem;
+        height: 5rem;
+        border-radius: 40px;
+        right: 3rem;
+        z-index: 1;
+        transition: ease-in-out 0.5s;
     }
-    @keyframes move {
-        from {right:-3rem;}
-        to {right: 2rem;}
-      };
-      @keyframes moveback {
-        from {right:2rem;}
-        to {right: -3rem;}
-      }
-
-}
+    .op{
+        opacity: 1;
+        transition: ease-in-out 1s;
+    }
+    
 .about{
     height: 100vh;
     background-color: rgb(139, 114, 165);
