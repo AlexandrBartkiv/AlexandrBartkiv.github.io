@@ -43,10 +43,6 @@ html, body {
   z-index: 0;
 }
 
-#menu__toggle {
-  visibility: hidden;
-}
-
 @media (max-width: 480px) {
   #menu__toggle {
     opacity: 0;
@@ -259,6 +255,14 @@ ul > li:hover::after {
   transition: ease-in-out 0.5s;
 }
 
+@media (max-width: 480px) {
+  .up {
+    height: 4rem;
+    right: 1rem;
+    bottom: 2rem;
+  }
+}
+
 .op {
   opacity: 1;
   -webkit-transition: ease-in-out 1s;
@@ -272,8 +276,8 @@ ul > li:hover::after {
   display: grid;
   grid-auto-flow: column;
       grid-template-areas: "h1 about" "photo about" ". about";
-  -ms-grid-columns: 1fr (minmax(350px, 1 fr))[auto-fit];
-      grid-template-columns: 1fr repeat(auto-fit, minmax(350px, 1 fr));
+  -ms-grid-columns: 29rem minmax(350px, 2fr);
+      grid-template-columns: 29rem minmax(350px, 2fr);
   -ms-grid-rows: [h1] 150px [photo] 350px;
       grid-template-rows: [h1] 150px [photo] 350px;
 }
@@ -311,6 +315,8 @@ ul > li:hover::after {
 }
 
 .about .aboutme h1 {
+  margin-top: 1rem;
+  margin-left: 2rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -375,12 +381,13 @@ ul > li:hover::after {
 .about .aboutskills {
   margin-top: 10rem;
   margin-right: 2rem;
+  margin-left: 5rem;
   height: 33rem;
-  width: auto;
+  max-width: 50rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #963eee;
+  background-color: #714d97;
   border: 2px solid white;
   border-radius: 5px;
   display: -webkit-box;
@@ -410,7 +417,6 @@ ul > li:hover::after {
 }
 
 .about .aboutskills .info {
-  width: auto;
   margin-left: 1rem;
   margin-top: 2rem;
   -webkit-box-pack: start;
@@ -424,7 +430,6 @@ ul > li:hover::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -6rem;
   width: 45rem;
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -482,12 +487,12 @@ ul > li:hover::after {
 
 .about .aboutskills > .skillswrapper > .skills {
   margin-bottom: 3rem;
-  border-radius: 20px;
+  border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-height: 300px;
-  background: white;
+  background: #603190;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -497,7 +502,8 @@ ul > li:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0px 20px 0px;
+  border: solid 2px white;
+  padding: 1rem;
 }
 
 @media (max-width: 480px) {

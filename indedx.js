@@ -4,6 +4,8 @@ $(document).ready(function() {
 		$([document.documentElement, document.body]).animate({
 			scrollTop: $(".about").offset().top
 		}, 1000,"swing");
+		$('nav').animate({right:'-102%'},1000)
+		$('#menu__toggle')=unchecked;
 	});
 	$(`#projects`).click(function(){
 		$([document.documentElement, document.body]).animate({
