@@ -564,6 +564,9 @@ ul > li:hover::after {
 }
 
 .projects .projects_wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   top: 10rem;
   left: 10rem;
@@ -593,6 +596,7 @@ ul > li:hover::after {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  margin: 1rem;
 }
 
 .projects .projects_wraper > #toDo .ToDo {
@@ -603,6 +607,30 @@ ul > li:hover::after {
 }
 
 .projects .projects_wraper > #toDo .ToDo:hover {
+  width: 18rem;
+  height: 18rem;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.projects .projects_wraper > #lister {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 1rem;
+}
+
+.projects .projects_wraper > #lister .Lister {
+  width: 15rem;
+  height: 15rem;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.projects .projects_wraper > #lister .Lister:hover {
   width: 18rem;
   height: 18rem;
   -webkit-transition: ease-in-out 0.2s;

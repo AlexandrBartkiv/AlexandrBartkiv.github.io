@@ -393,6 +393,7 @@ ul{
         }
     }
     .projects_wraper{
+        display: flex;
         position: relative;
         top: 10rem;
         left: 10rem;    
@@ -411,6 +412,7 @@ ul{
         &>#toDo{
             height: max-content;
             width: max-content;
+            margin: 1rem;
             & .ToDo{
                 width: 15rem;
                 height: 15rem;
@@ -421,6 +423,21 @@ ul{
                 height: 18rem;
                 transition: ease-in-out 0.2s;
                 
+            }
+        }
+        &>#lister{
+            height: max-content;
+            width: max-content;
+            margin: 1rem;
+            & .Lister{
+                width: 15rem;
+                height: 15rem;
+                transition: ease-in-out 0.2s;
+            }
+            & .Lister:hover{
+                width: 18rem;
+                height: 18rem;
+                transition: ease-in-out 0.2s;
             }
         }
     }
