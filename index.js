@@ -43,16 +43,16 @@ $(window).scroll(function(){
         var title = $(this).find('.title').val()
         var comment = $(this).find('.comment').val()
         
-        // axios({
-        //     method: 'post',
-        //     url:'https://formspree.io/f/xdolkbzk',
-        //     data:{
-        //         name,
-        //         mail,
-        //         title,
-        //         comment
-        //     },
-        // });
+        axios({
+            method: 'post',
+            url:'https://formspree.io/f/xdolkbzk',
+            data:{
+                name,
+                mail,
+                title,
+                comment
+            },
+        });
         $(this).find('span').fadeIn(200).delay(2000).fadeOut(200);
         $('.popupWraper').delay(1500).fadeOut(200);
         $('.popupBack').delay(1500).fadeOut(200);
@@ -89,5 +89,9 @@ $(window).scroll(function(){
     $('.play').click(function (e) { 
         $('.play').hide()
         $('iframe').show()
+        console.log($('#myframe'))
+        console.log($('#myframe').attr('src'))
+        src = $('#myframe').attr('src');
+        $('#myframe').attr('src', src + '&autoplay=1')
     });
 });
