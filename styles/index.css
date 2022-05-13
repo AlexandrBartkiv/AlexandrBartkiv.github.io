@@ -484,6 +484,20 @@
   }
 }
 
+.page_wraper > .work > div p {
+  opacity: 0;
+  color: white;
+  background-color: #0000008e;
+  position: absolute;
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  word-spacing: 0.7rem;
+  font-size: 1.2rem;
+  padding-top: 130px;
+}
+
 .page_wraper > .work > div a {
   height: 100%;
   width: 100%;
